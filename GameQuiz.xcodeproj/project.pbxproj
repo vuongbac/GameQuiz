@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		210C09F4711D281851BB2A7A /* Pods_GameQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE01A577A48D793C6656ABC /* Pods_GameQuiz.framework */; };
 		57D60BCE345207E2C651B11D /* Pods_GameQuiz_GameQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420444162D6FEDA38CC2BD7D /* Pods_GameQuiz_GameQuizUITests.framework */; };
+		5E74890525009DA300097E02 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74890425009DA300097E02 /* MenuViewController.swift */; };
+		5E7489072500A26300097E02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E7489062500A26300097E02 /* GoogleService-Info.plist */; };
+		5E74890A2500BEFE00097E02 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7489092500BEFE00097E02 /* CategoryModel.swift */; };
+		5E74890E2500C18E00097E02 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74890C2500C18E00097E02 /* CategoryTableViewCell.swift */; };
+		5E74890F2500C18E00097E02 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E74890D2500C18E00097E02 /* CategoryTableViewCell.xib */; };
+		5E7489112500C2C500097E02 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7489102500C2C500097E02 /* CategoryViewController.swift */; };
+		5E7489152500F2D600097E02 /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7489132500F2D600097E02 /* fb.png */; };
+		5E7489162500F2D600097E02 /* gg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7489142500F2D600097E02 /* gg.png */; };
+		5E7489182500F3B900097E02 /* quiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7489172500F3B900097E02 /* quiz.png */; };
 		5EEBDA292500063D005D5199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBDA282500063D005D5199 /* AppDelegate.swift */; };
 		5EEBDA2B2500063D005D5199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBDA2A2500063D005D5199 /* SceneDelegate.swift */; };
 		5EEBDA2D2500063D005D5199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEBDA2C2500063D005D5199 /* ViewController.swift */; };
@@ -44,6 +53,15 @@
 		32F620219D656291C7E04C11 /* Pods_GameQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420444162D6FEDA38CC2BD7D /* Pods_GameQuiz_GameQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameQuiz_GameQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		457979F783E10E2A24F1716D /* Pods-GameQuiz-GameQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameQuiz-GameQuizUITests.release.xcconfig"; path = "Target Support Files/Pods-GameQuiz-GameQuizUITests/Pods-GameQuiz-GameQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E74890425009DA300097E02 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5E7489062500A26300097E02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E7489092500BEFE00097E02 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5E74890C2500C18E00097E02 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		5E74890D2500C18E00097E02 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		5E7489102500C2C500097E02 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		5E7489132500F2D600097E02 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
+		5E7489142500F2D600097E02 /* gg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gg.png; sourceTree = "<group>"; };
+		5E7489172500F3B900097E02 /* quiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quiz.png; sourceTree = "<group>"; };
 		5EEBDA252500063D005D5199 /* GameQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEBDA282500063D005D5199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EEBDA2A2500063D005D5199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +122,33 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		5E7489082500BEE600097E02 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E7489092500BEFE00097E02 /* CategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E74890B2500C13E00097E02 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5E74890C2500C18E00097E02 /* CategoryTableViewCell.swift */,
+				5E74890D2500C18E00097E02 /* CategoryTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5E7489122500F2C300097E02 /* item */ = {
+			isa = PBXGroup;
+			children = (
+				5E7489132500F2D600097E02 /* fb.png */,
+				5E7489172500F3B900097E02 /* quiz.png */,
+				5E7489142500F2D600097E02 /* gg.png */,
+			);
+			path = item;
+			sourceTree = "<group>";
+		};
 		5EEBDA1C2500063D005D5199 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +174,9 @@
 		5EEBDA272500063D005D5199 /* GameQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				5E7489122500F2C300097E02 /* item */,
+				5E74890B2500C13E00097E02 /* Cell */,
+				5E7489082500BEE600097E02 /* Model */,
 				5EEBDA282500063D005D5199 /* AppDelegate.swift */,
 				5EEBDA2A2500063D005D5199 /* SceneDelegate.swift */,
 				5EEBDA2C2500063D005D5199 /* ViewController.swift */,
@@ -136,6 +184,9 @@
 				5EEBDA312500063F005D5199 /* Assets.xcassets */,
 				5EEBDA332500063F005D5199 /* LaunchScreen.storyboard */,
 				5EEBDA362500063F005D5199 /* Info.plist */,
+				5E7489062500A26300097E02 /* GoogleService-Info.plist */,
+				5E74890425009DA300097E02 /* MenuViewController.swift */,
+				5E7489102500C2C500097E02 /* CategoryViewController.swift */,
 			);
 			path = GameQuiz;
 			sourceTree = "<group>";
@@ -180,6 +231,7 @@
 				5EEBDA222500063D005D5199 /* Frameworks */,
 				5EEBDA232500063D005D5199 /* Resources */,
 				7ECC4BB7B64EC9BB6F9C222B /* [CP] Embed Pods Frameworks */,
+				D2CEBC7307EF60E54F7BA061 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +270,7 @@
 				5EEBDA4325000640005D5199 /* Frameworks */,
 				5EEBDA4425000640005D5199 /* Resources */,
 				4F8195DFFBABCC3B34E8DF21 /* [CP] Embed Pods Frameworks */,
+				D078462AEECDB8E716198298 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,8 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EEBDA352500063F005D5199 /* LaunchScreen.storyboard in Resources */,
+				5E74890F2500C18E00097E02 /* CategoryTableViewCell.xib in Resources */,
+				5E7489072500A26300097E02 /* GoogleService-Info.plist in Resources */,
 				5EEBDA322500063F005D5199 /* Assets.xcassets in Resources */,
+				5E7489182500F3B900097E02 /* quiz.png in Resources */,
 				5EEBDA302500063D005D5199 /* Main.storyboard in Resources */,
+				5E7489152500F2D600097E02 /* fb.png in Resources */,
+				5E7489162500F2D600097E02 /* gg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +436,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameQuiz/Pods-GameQuiz-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D078462AEECDB8E716198298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameQuiz-GameQuizUITests/Pods-GameQuiz-GameQuizUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameQuiz-GameQuizUITests/Pods-GameQuiz-GameQuizUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameQuiz-GameQuizUITests/Pods-GameQuiz-GameQuizUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CEBC7307EF60E54F7BA061 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameQuiz/Pods-GameQuiz-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameQuiz/Pods-GameQuiz-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameQuiz/Pods-GameQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB883FC71243DA1A6A52A046 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,7 +501,11 @@
 			files = (
 				5EEBDA2D2500063D005D5199 /* ViewController.swift in Sources */,
 				5EEBDA292500063D005D5199 /* AppDelegate.swift in Sources */,
+				5E7489112500C2C500097E02 /* CategoryViewController.swift in Sources */,
 				5EEBDA2B2500063D005D5199 /* SceneDelegate.swift in Sources */,
+				5E74890A2500BEFE00097E02 /* CategoryModel.swift in Sources */,
+				5E74890525009DA300097E02 /* MenuViewController.swift in Sources */,
+				5E74890E2500C18E00097E02 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

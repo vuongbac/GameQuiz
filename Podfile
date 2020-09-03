@@ -6,6 +6,13 @@ target 'GameQuiz' do
   use_frameworks!
 
     pod 'FBSDKLoginKit'
+    pod 'GoogleSignIn'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+
+
     
  
   target 'GameQuizTests' do

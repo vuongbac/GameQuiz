@@ -5,6 +5,8 @@
 
 import UIKit
 import FBSDKCoreKit
+import GoogleSignIn
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-          
+        
+         GIDSignIn.sharedInstance().clientID = "704460239196-h1fpfqqknfkcudo0bm4r17n4t7kjimr0.apps.googleusercontent.com"
+        
+        FirebaseApp.configure()
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions
@@ -34,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        return((GIDSignIn.sharedInstance()?.handle(url)) != nil)
 
     }
 
