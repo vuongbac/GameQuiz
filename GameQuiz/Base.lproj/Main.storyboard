@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="50" id="cUB-cf-BoF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Facebook" image="fb.png"/>
+                                <state key="normal" title="     Facebook" image="fb.png"/>
                                 <connections>
                                     <action selector="btnFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI4-0X-TjV"/>
                                 </connections>
@@ -34,7 +34,9 @@
                                     <constraint firstAttribute="height" constant="50" id="7Xb-eO-SGw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title=" Google" image="gg.png"/>
+                                <state key="normal" title="     Google" image="gg.png">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                </state>
                                 <connections>
                                     <action selector="btnGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBx-tf-34X"/>
                                 </connections>
@@ -84,6 +86,9 @@
                                 <rect key="frame" x="311" y="54" width="54" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="LogOut"/>
+                                <connections>
+                                    <action selector="btnLogOut:" destination="vej-lz-sZS" eventType="touchUpInside" id="YBY-uV-aYQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuD-EK-wym">
                                 <rect key="frame" x="10" y="85" width="355" height="21"/>

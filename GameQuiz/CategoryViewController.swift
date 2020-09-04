@@ -8,23 +8,19 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import FirebaseDatabase
 import FirebaseAnalytics
 
 class CategoryViewController: UIViewController {
     let privateIdentifier = "CategoryTableViewCell"
     @IBOutlet weak var tableView: UITableView!
-    
     var categorys = [CategoryModel]()
-    
     var ref = Database.database().reference()
-    
     var a = ["asa" , "asasad", "bac" , "kol ", "lo"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(UINib(nibName: privateIdentifier, bundle: nil), forCellReuseIdentifier: privateIdentifier)
-        
     }
     
     func retrieveDataQuestion(){
@@ -37,9 +33,6 @@ class CategoryViewController: UIViewController {
                         let value = snap.value as? NSDictionary
                         let categoryId = value?["categoryId"] as? String
                         let nameCategory = value?["nameCategory"] as? String
-                        
-                        
-                        
                     }
                 }
             }
@@ -48,8 +41,6 @@ class CategoryViewController: UIViewController {
     }
     
 }
-
-
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

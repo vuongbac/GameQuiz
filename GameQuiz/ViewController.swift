@@ -7,22 +7,24 @@ import FBSDKLoginKit
 import GoogleSignIn
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class ViewController: UIViewController, GIDSignInDelegate {
-    
     @IBOutlet weak var btnG: UIButton!
     @IBOutlet weak var btnF: UIButton!
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         btnF.layer.cornerRadius = 25
         btnG.layer.cornerRadius = 25
         
         GIDSignIn.sharedInstance()?.delegate = self
-        if let token = AccessToken.current{
-            
+        if AccessToken.current != nil{
             firebaseFaceBookLogin(token: AccessToken.current!.tokenString)
         }
     }
+    
     @IBAction func btnFacebook(_ sender: Any) {
         facebooklogin()
     }
@@ -33,25 +35,21 @@ class ViewController: UIViewController, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        if let error = error {
-            return
-        }
+        print("co chay vao day ")
+        
+        let userId = user.userID
         let email1 = user.profile.email
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            if error != nil {
-                print("a")
-                } else {
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
-                vc.modalPresentationStyle = .fullScreen
-                vc.email = email1!
-                self.present(vc, animated: true, completion:nil)                }
+        let fullName = user.profile.name
+        
+        ref = Database.database().reference()
+        let a = Int.random(in: 0..<10)
+        self.ref.child("ListUser").child("user\(a)").updateChildValues(["id" : userId , "email":email1 , "name": fullName]) { (error,reference) in
+            if error != nil{
+                print("error")
             }
-            return
+            print("a")
         }
-    
+    }
     
     
     func facebooklogin() {
@@ -62,71 +60,60 @@ class ViewController: UIViewController, GIDSignInDelegate {
                 print(error)
             case .cancelled:
                 print("User cancelled login")
-            case .success(let grantedPermissions,
-                          let declinedPermissions,
-                          let accessToken):
+            case .success(let grantedPermissions,let declinedPermissions,let accessToken):
                 print("Logged in")
                 self.returnUserData()
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion:nil)
             }
         }
     }
     
-//    func loginButton(_ loginButton: FBLoginButton!, didCompleteWith result: LoginManagerLoginResult!, error: Error!) {
-//        if let error = error {
-//        print(error.localizedDescription)
-//        return
-//      }
-//        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
-//
-//        Auth.auth().signIn(with: credential) { (authResult, error) in
-//            if error != nil {
-//                print("a")
-//                } else {
-//                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
-//                vc.modalPresentationStyle = .fullScreen
-//               // vc.email = email1!
-//                self.present(vc, animated: true, completion:nil)                }
-//            }
-//            return
-//        }
     
     
     func firebaseFaceBookLogin(token:String)  {
         let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
         Auth.auth().signIn(with: credential) { (authResult, error) in
-        if let error = error {
-            print("error Login")
-            
-        return
+            if error != nil {
+                print("error Login")
+                return
             }
             print("Login Done")
-            if let user = Auth.auth().currentUser{
-                print("ok")
-                
+            if Auth.auth().currentUser != nil{
             }
+        }
     }
-    }
     
-        
-    
-    
+    // get info get user ] facebook
     func returnUserData() {
-        let graphRequest : GraphRequest = GraphRequest(graphPath: "me", parameters: ["fields":"email,name"])
-        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
-            if ((error) != nil) {
-                // Process error
-                print(error)
-            } else {
-                let resultDic = result as! NSDictionary
-                if (resultDic.value(forKey:"name") != nil) {
-                    let userName = resultDic.value(forKey:"name")! as! String as NSString?
-                }
-                if (resultDic.value(forKey:"email") != nil) {
-                    let userEmail = resultDic.value(forKey:"email")! as! String as NSString?
+        if(AccessToken.current) != nil{
+            GraphRequest(graphPath: "me", parameters: ["file":"id, email, name"]).start { (connection, result, errer) in
+                if(errer == nil){
+                    let dict = result as! [String: AnyObject]
+                    print("result")
+                    let picotreDic = dict as NSDictionary
+                    
+                    let name = picotreDic.object(forKey: "name") as! String
+                    let id = picotreDic.object(forKey: "id") as! String
+                    
+                    print("name is :\(name)")
+                    print(id)
+                    
+                    self.ref = Database.database().reference()
+                    var a = Int.random(in: 0..<10)
+                    self.ref.child("ListUser").child("user\(a)").updateChildValues(["id" : id , "name":name]) { (error,reference) in
+                        if error != nil{
+                            print("error")
+                        }
+                        print("a")
+                    }
                     
                 }
             }
-        })
+        }
+        
+        
     }
 }
 

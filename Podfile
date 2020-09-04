@@ -10,6 +10,7 @@ target 'GameQuiz' do
     pod 'Firebase/Analytics'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'Firebase/Firestore'
     pod 'Firebase/Auth'
 
 
