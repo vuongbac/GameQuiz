@@ -12,6 +12,7 @@ target 'GameQuiz' do
     pod 'Firebase/Database'
     pod 'Firebase/Firestore'
     pod 'Firebase/Auth'
+    pod 'SDWebImage'
 
 
     

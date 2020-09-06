@@ -47,6 +47,10 @@ class ViewController: UIViewController, GIDSignInDelegate {
             if error != nil{
                 print("error")
             }
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.lblEmail.text = fullName
+            self.present(vc, animated: true, completion:nil)
             print("a")
         }
     }
@@ -63,9 +67,7 @@ class ViewController: UIViewController, GIDSignInDelegate {
             case .success(let grantedPermissions,let declinedPermissions,let accessToken):
                 print("Logged in")
                 self.returnUserData()
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion:nil)
+               
             }
         }
     }
@@ -85,7 +87,7 @@ class ViewController: UIViewController, GIDSignInDelegate {
         }
     }
     
-    // get info get user ] facebook
+    // get info get user  facebook
     func returnUserData() {
         if(AccessToken.current) != nil{
             GraphRequest(graphPath: "me", parameters: ["file":"id, email, name"]).start { (connection, result, errer) in
@@ -106,8 +108,10 @@ class ViewController: UIViewController, GIDSignInDelegate {
                         if error != nil{
                             print("error")
                         }
-                        print("a")
-                    }
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "menu") as! MenuViewController
+                                       vc.modalPresentationStyle = .fullScreen
+//                        vc.lblEmail.text = name
+                                       self.present(vc, animated: true, completion:nil)                    }
                     
                 }
             }

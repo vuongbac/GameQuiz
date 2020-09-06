@@ -28,4 +28,9 @@ class CategoryTableViewCell: UITableViewCell {
     @IBAction func btnPlay(_ sender: Any) {
         
     }
+    
+//    func setUp(data: CategoryModel) {
+//        lblNameCategory.text = data.nameCategory
+//    }
+
 }

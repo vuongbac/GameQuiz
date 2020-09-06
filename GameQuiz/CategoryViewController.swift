@@ -13,45 +13,48 @@ import FirebaseDatabase
 import FirebaseAnalytics
 
 class CategoryViewController: UIViewController {
+    
     let privateIdentifier = "CategoryTableViewCell"
-    @IBOutlet weak var tableView: UITableView!
-    var categorys = [CategoryModel]()
+    var refArtists:DatabaseReference!
+    var categorys = [Category]()
     var ref = Database.database().reference()
-    var a = ["asa" , "asasad", "bac" , "kol ", "lo"]
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: privateIdentifier, bundle: nil), forCellReuseIdentifier: privateIdentifier)
+        GetListCategory()
     }
     
-    func retrieveDataQuestion(){
-        self.ref.child("Mastersheet").observeSingleEvent(of: .value) { (snapshot) in
-            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
-                for snap in snapshots {
-                    print(snap.key)
-                    let myKey = snap.key
-                    self.ref.child("Mastersheet").child(myKey).observeSingleEvent(of: .value) { (mySnap) in
-                        let value = snap.value as? NSDictionary
-                        let categoryId = value?["categoryId"] as? String
-                        let nameCategory = value?["nameCategory"] as? String
-                    }
+    func GetListCategory(){
+        ref = Database.database().reference().child("Category")
+        ref.observe(DataEventType.value) { (snapshot) in
+            if snapshot.childrenCount > 0 {
+                self.categorys.removeAll()
+                
+                for artist in snapshot.children.allObjects as! [DataSnapshot] {
+                    let art = artist.value as? [String:AnyObject]
+                    let artName = art?["Name"]
+                    let artId = art?["Id"]
+                    let artImage = art?["Image"]
+                    let arts = Category(id: artId as! Int , name: artName as! String, image: artImage as! String)
+                    self.categorys.append(arts)
                 }
+                self.tableView.reloadData()
             }
         }
-        
     }
-    
 }
+
 
 extension CategoryViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return a.count
+        return categorys.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: privateIdentifier, for: indexPath) as! CategoryTableViewCell
-        var data = a[indexPath.row]
-        cell.lblNameCategory.text = a[indexPath.row]
+        cell.setUp(data: categorys[indexPath.row])
         return cell
     }
-    
-    
 }

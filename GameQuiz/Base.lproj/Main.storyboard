@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DS9-mB-6do">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,11 @@
             <objects>
                 <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WJ-aY-gId">
-                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <rect key="frame" x="20" y="708" width="335" height="50"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cUB-cf-BoF"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="id3-a5-qx1">
-                                <rect key="frame" x="20" y="527" width="335" height="50"/>
+                                <rect key="frame" x="20" y="638" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.96885389089584351" green="0.71372967958450317" blue="0.020940966904163361" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7Xb-eO-SGw"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quiz.png" translatesAutoresizingMaskIntoConstraints="NO" id="LCc-8h-vJM">
-                                <rect key="frame" x="60" y="50" width="255" height="299"/>
+                                <rect key="frame" x="60" y="94" width="255" height="299"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -73,17 +73,17 @@
             <objects>
                 <viewController storyboardIdentifier="menu" id="vej-lz-sZS" customClass="MenuViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sx9-Bc-WSE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inq-RM-fY2">
-                                <rect key="frame" x="10" y="54" width="44" height="21"/>
+                                <rect key="frame" x="10" y="98" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16l-da-IML">
-                                <rect key="frame" x="311" y="54" width="54" height="30"/>
+                                <rect key="frame" x="311" y="98" width="54" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="LogOut"/>
                                 <connections>
@@ -91,16 +91,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuD-EK-wym">
-                                <rect key="frame" x="10" y="85" width="355" height="21"/>
+                                <rect key="frame" x="10" y="129" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qif-r1-C7C">
-                                <rect key="frame" x="0.0" y="126" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="170" width="375" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-oH-l73">
-                                        <rect key="frame" x="158.5" y="11.5" width="58" height="26"/>
+                                        <rect key="frame" x="158.66666666666666" y="11.666666666666657" width="58" height="26"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -114,7 +114,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAS-mc-osd">
-                                <rect key="frame" x="20" y="225" width="335" height="40"/>
+                                <rect key="frame" x="20" y="269" width="335" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ust-CO-0uK"/>
@@ -128,7 +128,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xb-Aa-wTA">
-                                <rect key="frame" x="20" y="285" width="335" height="40"/>
+                                <rect key="frame" x="20" y="329" width="335" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wjt-WB-vFS"/>
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKX-Kg-Fbx">
-                                <rect key="frame" x="20" y="345" width="335" height="40"/>
+                                <rect key="frame" x="20" y="389" width="335" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="icn-56-Fhl"/>
@@ -194,34 +194,104 @@
             <objects>
                 <viewController storyboardIdentifier="category" id="DS9-mB-6do" customClass="CategoryViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3r-2r-KCf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MQJ-9T-z6I">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="93" width="375" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="DS9-mB-6do" id="Nl1-7N-Kbn"/>
                                     <outlet property="delegate" destination="DS9-mB-6do" id="ufy-fG-d7k"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4R-F0-Ycd">
+                                <rect key="frame" x="0.0" y="44" width="375" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CateGory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-5P-TnQ">
+                                        <rect key="frame" x="138" y="11.666666666666664" width="99" height="26"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ydt-5P-TnQ" firstAttribute="centerX" secondItem="o4R-F0-Ycd" secondAttribute="centerX" id="HQp-wn-0lZ"/>
+                                    <constraint firstItem="Ydt-5P-TnQ" firstAttribute="centerY" secondItem="o4R-F0-Ycd" secondAttribute="centerY" id="NQS-Of-hoa"/>
+                                    <constraint firstAttribute="height" constant="49" id="RF0-du-NMK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="x1E-1G-Zuj" firstAttribute="bottom" secondItem="MQJ-9T-z6I" secondAttribute="bottom" id="B5S-gC-df0"/>
+                            <constraint firstItem="o4R-F0-Ycd" firstAttribute="trailing" secondItem="x1E-1G-Zuj" secondAttribute="trailing" id="B7S-sg-dsN"/>
+                            <constraint firstItem="o4R-F0-Ycd" firstAttribute="top" secondItem="x1E-1G-Zuj" secondAttribute="top" id="Pp2-Jw-fc9"/>
+                            <constraint firstItem="MQJ-9T-z6I" firstAttribute="top" secondItem="o4R-F0-Ycd" secondAttribute="bottom" id="Vh9-7r-DJL"/>
                             <constraint firstItem="x1E-1G-Zuj" firstAttribute="trailing" secondItem="MQJ-9T-z6I" secondAttribute="trailing" id="XNE-GB-A8G"/>
                             <constraint firstItem="MQJ-9T-z6I" firstAttribute="leading" secondItem="x1E-1G-Zuj" secondAttribute="leading" id="raf-Fq-FWM"/>
-                            <constraint firstItem="MQJ-9T-z6I" firstAttribute="top" secondItem="x1E-1G-Zuj" secondAttribute="top" id="w3C-jk-9iq"/>
+                            <constraint firstItem="o4R-F0-Ycd" firstAttribute="leading" secondItem="x1E-1G-Zuj" secondAttribute="leading" id="vYY-2f-7ou"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x1E-1G-Zuj"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="MQJ-9T-z6I" id="SVS-ug-DIZ"/>
+                        <outlet property="tableView" destination="MQJ-9T-z6I" id="LGi-hn-8jl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKA-OW-nwD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2967.1999999999998" y="116.49175412293854"/>
+            <point key="canvasLocation" x="2967.1999999999998" y="116.00985221674877"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="zyv-c0-7og">
+            <objects>
+                <viewController storyboardIdentifier="question" id="S6k-UG-mm8" customClass="QuestionViewController" customModule="GameQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UDO-Z7-A3c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27X-si-eKG">
+                                <rect key="frame" x="0.0" y="44" width="375" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ListQuestion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-HK-g6K">
+                                        <rect key="frame" x="121.66666666666667" y="11.666666666666664" width="131.66666666666663" height="26"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="SVd-sY-Hub"/>
+                                    <constraint firstItem="Isx-HK-g6K" firstAttribute="centerX" secondItem="27X-si-eKG" secondAttribute="centerX" id="dUg-Jo-Uz7"/>
+                                    <constraint firstItem="Isx-HK-g6K" firstAttribute="centerY" secondItem="27X-si-eKG" secondAttribute="centerY" id="mM0-AD-ksR"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2q1-bU-SRV">
+                                <rect key="frame" x="0.0" y="93" width="375" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2q1-bU-SRV" firstAttribute="leading" secondItem="ubR-ry-Wqt" secondAttribute="leading" id="1JV-2j-OAx"/>
+                            <constraint firstItem="27X-si-eKG" firstAttribute="top" secondItem="ubR-ry-Wqt" secondAttribute="top" id="8TY-Lf-UBA"/>
+                            <constraint firstItem="2q1-bU-SRV" firstAttribute="top" secondItem="27X-si-eKG" secondAttribute="bottom" id="Tb2-f1-sFg"/>
+                            <constraint firstItem="ubR-ry-Wqt" firstAttribute="trailing" secondItem="2q1-bU-SRV" secondAttribute="trailing" id="YPu-H4-O6G"/>
+                            <constraint firstItem="ubR-ry-Wqt" firstAttribute="bottom" secondItem="2q1-bU-SRV" secondAttribute="bottom" id="fUF-Oz-ANn"/>
+                            <constraint firstItem="ubR-ry-Wqt" firstAttribute="trailing" secondItem="27X-si-eKG" secondAttribute="trailing" id="yfh-MR-sLj"/>
+                            <constraint firstItem="27X-si-eKG" firstAttribute="leading" secondItem="UDO-Z7-A3c" secondAttribute="leading" id="yqG-kq-6hR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ubR-ry-Wqt"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2q1-bU-SRV" id="Koo-Ks-gJ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atw-Dl-Olk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3756" y="111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pNV-E2-zSn">
@@ -229,7 +299,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="di7-Qg-rzD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lLi-aI-Q0c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
